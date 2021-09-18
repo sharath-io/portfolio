@@ -4,132 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Component Library</title>
-
+    <title>portfolio</title>
     <link href="styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-    <h1>sharth's component library</h1>
-    <p>I am learning web dev through neogcamp and I want to make library which would make all my projects looks good and consistent</p>
 
-    <hr>
-
-    <h2>@typography</h2>
-    <h1>This is the biggest heading</h1>
-    <h2>This is the second biggest heading</h2>
-    <p> this is paragraph tag which writes text to the end with normal text</p>
-    <small> this is with small text</small>
-
-    <hr>
-
-    <h2>@containers</h2>
-
-    <h3>fluid container</h3>
-    <div class="container">This is a fluid container and it will go till end of page </div>
-
-    <h3>center container</h3>
-    <div class="container container-center">This is a centered container and it will go till the specified width</div>
-
-    <hr>
-
-    <h2>@links</h2>
-    <a class="link link-primary" href="/">Primary link</a>
-    <a class="link link-secondary" href="/">Secondary link</a>
-
-    <hr>
-
-    <h2>@lists</h2>
-
-    <h3>unordered list</h3>
-    <ul class="list-non-bullet">
-        <li>Item One</li>
-        <li>Item Two</li>
-        <li>Item Three</li>
-    </ul>
-
-    <h3>unordered inline list</h3>
-    <ul class="list-non-bullet">
-        <li class="list-item-inline">Inline Item One</li>
-        <li class="list-item-inline">Inline Item Two</li>
-        <li class="list-item-inline">Inline Item Three</li>
-    </ul>
-
-    <h3>reverse ordered list</h3>
-    <ol reversed>
-        <li>milk</li>
-        <li>bread</li>
-        <li>eggs</li>
-    </ol>
-
-    <hr>
-
-    <h2>@nav</h3>
-    <nav class="navigation container">
-        <div class="nav-brand">I am sharath</div>
-
-        <ul class="list-non-bullet nav-list">
-            <li class="list-item-inline">
-                <a class="link link-active" href="/">Home</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="/">Projects</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="/">Blogs</a>
-            </li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    <h2>Header</h2>
-    <header class="hero">
-        <img class="hero-img" src="images/hero.svg"/>
-        <h1 class="hero-heading">Sharath the <span class="heading-inverted"> Web Developer</span></h1>
-    </header>
+        <nav class="navigation container">
+            <div class="nav-brand">sharath-io</div>
     
-    <hr>
+            <ul class="list-non-bullet nav-list">
+                <li class="list-item-inline">
+                    <a class="link link-active" href="index.html">Home</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="projects.html">Projects</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="blogs.html">Blogs</a>
+                </li>
+            </ul>
+        </nav>
 
-    <h2>@section</h2>
-    <section class="section">
-        <div class="container container-center">
-            <h1>White section</h1>
-            <p>This will have white background This will have white background This will have white background This will have white background This will have white backThis will have white background ground This will have white background </p>
-        </div>
-        
-    </section>
+        <header class="hero">
+            <img class="hero-img" src="/images/hero.svg"/>
+            <h1 class="hero-heading">Sharath the <span class="heading-inverted"> Web Developer</span></h1>
+        </header>
 
-    <section class="section ow">
-        <div class="container container-center">
-            <h1>Gray section</h1>
-            <p>This will have gray background This will have gray background This will have gray background This will have gray background This will have gray backThis will have gray background ground This will have gray background </p>    
-        </div>
-    </section>
+        <section class="section ow">
+            <div class="container container-center">
+                <h1>Technologies</h1>
+                <p>I am familiar with HTML5, CSS3, Git, Javascript, nodeJS reactJS and web hosting</p>    
+            </div>
+        </section>
 
-    <hr>
+        <section class="section">
+            <div class="container container-center">
+                <h1>Projects</h1>
+                <p>learning web dev through project based approach. See my projects here. </p>
+                <a class="link link-primary" href="/projects.html">See Projects</a>
+            </div>
+        </section>
 
-    <h2>@footer</h2>
-    <footer class="footer">
-        <div class="footer-header">connect with me at socials</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline">
-                <a class="link" href="/">
-                    socialOne
-                 </a>
-           </li>
-           <li class="list-item-inline">
-            <a class="link" href="/">
-                    socialTwo
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="/">
-                    socialTwo
-                </a>
-            </li>
-        </ul>
-    </footer>
+        <section class="section ow">
+            <div class="container container-center">
+                <h1>Blogs</h1>
+                <p>I have few blogs on web development topics. See my blogs here</p>    
+                <a class="link link-secondary" href="/blogs.html">Read Blogs</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-header">connect with me at Socials</div>
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline">
+                    <a class="link" href="https://github.com/sharath-io">
+                        Github
+                     </a>
+               </li>
+               <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/sharath-io/">
+                        Linkedin
+                    </a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://twitter.com/sharath_io">
+                        twitter
+                    </a>
+                </li>
+            </ul>
+        </footer>
 
 
 
