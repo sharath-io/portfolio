@@ -3,7 +3,7 @@
 :root {
     --primary-color: #34D399;
     --dark-gray: #9CA3AF;
-    --white: #E5E7EB;
+    --off-white: #E5E7EB;
 }
 
 body {
@@ -96,7 +96,7 @@ hr {
     color: var(--primary-color);
 }
 
-.section{
+.section {
     padding: 2rem;
 }
 
@@ -105,10 +105,10 @@ hr {
 }
 
 .ow {
-    background-color: var(--white);
+    background-color: var(--off-white);
 }
 
-.footer{
+.footer {
     background-color: var(--primary-color);
     padding: 2rem;
     text-align: center;
@@ -116,15 +116,19 @@ hr {
     border-top-right-radius: 1rem;
 }
 
-.footer .link{
+.footer .link {
     color: white;
 }
 
-.footer ul{
+.footer ul {
     padding-inline-start: 0px;
 }
 
-.footer .footer-header{
+.footer .footer-header {
     font-weight: bold;
     font-size: large;
+}
+
+.projects-list {
+    padding: 2rem;
 }
