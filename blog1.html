@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog1</title>
+</head>
+
+<body>
+    <h1>Difference between Var, Let, Const in javascript</h1>
+    <hr>
+    <h2>Var</h2>
+    <h3>Scope of var</h3>
+    <p>
+        is global if declared outside the function, for use of total program
+        Is local if declared inside any particular function
+
+        Var variables can be re-declared and updated
+
+        Problem with var if we re-declare it again some where in the code with knowingly, it causes problem in the code.
+
+        This is why we use let and const
+    </p>
+    <hr>
+
+    <h2>Let</h2>
+    <p>Let is now preferred for variable declaration, It comes as an improvement to var.</p>
+    <h3>Scope of let</h3>
+    Is block scoped
+    Block is a code between { }
+    So, a variable declared in a block with let is only used within the block.
+
+    Let can be updated but not re-declared
+    Let cannot be re-declared within its scope
+
+    So, withWhen using let, you don't have to bother if you have used a name for a variable before as a variable
+    exists only within its scope.
+
+    Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that
+    occurs with var does not happen.
+
+   <hr>
+    <h2>Const</h2>
+    <p>Variables declared with the const maintain constant values. const declarations share some similarities with let
+    declarations.</p>
+    <h3>Scope of Const</h3>
+    Const is block scoped same as let
+
+    Const cannot be updated or re-declared
+    This means that the value of a variable declared with const remains the same within its scope. It cannot be
+    updated or re-declared.
+
+    Note: Every const declaration, therefore, must be initialized at the time of declaration.
+    </p>
+
+</body>
+
+</html>
