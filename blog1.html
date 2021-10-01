@@ -6,54 +6,227 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog1</title>
+    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Difference between Var, Let, Const in javascript</h1>
-    <hr>
-    <h2>Var</h2>
-    <h3>Scope of var</h3>
-    <p>
-        is global if declared outside the function, for use of total program
-        Is local if declared inside any particular function
+    <nav class="navigation container">
+        <div class="nav-brand">sharath</div>
 
-        Var variables can be re-declared and updated
+        <ul class="list-non-bullet nav-list">
+            <li class="list-item-inline">
+                <a class="link" href="index.html">Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="projects.html">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link  link-active" href="blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
 
-        Problem with var if we re-declare it again some where in the code with knowingly, it causes problem in the code.
+    <div class="main-blog">
+        <h1>Difference between var, let, const in javascript</h1>
+        <small>BY <a href="https://twitter.com/sharath_io">@Sharath</a> | September 2021 </small>
+        <hr>
 
-        This is why we use let and const
-    </p>
-    <hr>
+        <main>
+            <h2> var </h2>
 
-    <h2>Let</h2>
-    <p>Let is now preferred for variable declaration, It comes as an improvement to var.</p>
-    <h3>Scope of let</h3>
-    Is block scoped
-    Block is a code between { }
-    So, a variable declared in a block with let is only used within the block.
+            ‘var’ is used to declare a variable and we can initialise the variable with value also
 
-    Let can be updated but not re-declared
-    Let cannot be re-declared within its scope
+            <div class="blog-code">
+                <p>var variableName;</p>
+                <p>var a; //declared a variable named ‘a’. By default it is undefined</p>
+                <p>var variableName = value;</p>
+                <p> var a =10 // declared a variable named ‘a’ and assigning 10 to it</p>
+            </div>
 
-    So, withWhen using let, you don't have to bother if you have used a name for a variable before as a variable
-    exists only within its scope.
+            Scope of variable declared with var
+            If declared inside any particular function it is local.
+            If declared outside the function , it is global
 
-    Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that
-    occurs with var does not happen.
+            <p>var hoisting</p>
+            <div class="blog-code">
+                <p>b = 100;</p>
+                <p>var b;</p>
+                <p>//is exactly same as</p>
+                <p>var b;</p>
+                <p>B = 100;</p>
+            </div>
 
-   <hr>
-    <h2>Const</h2>
-    <p>Variables declared with the const maintain constant values. const declarations share some similarities with let
-    declarations.</p>
-    <h3>Scope of Const</h3>
-    Const is block scoped same as let
+            Because variable declarations are processed, before any code is executed
+            So, we can declare a variable anywhere in the code , it is same as we declare variables at the top of code
+            It is called hoisting, because variable declaration is moved to the top (hoist).
 
-    Const cannot be updated or re-declared
-    This means that the value of a variable declared with const remains the same within its scope. It cannot be
-    updated or re-declared.
+            <p>‘var’ variables can be re-declared and updated</p>
+            <div class="blog-code">
+                <p>var c = 20;</p>
+                <p>var c = 30;</p>
+                <p>or</p>
+                <p>c = 30;</p>
+                <p>console.log(c);</p>
+                <p>console-o/p: 30</p>
+            </div>
 
-    Note: Every const declaration, therefore, must be initialized at the time of declaration.
-    </p>
+            <h3>Problem with var: </h3>
+            with re-declaration c variable is again defined. It creates a problem in the code , if you don’t realise
+            that c
+            is already defined before.
+
+
+            <p>let const are introduced in ES6.
+                ES6 or ECMAScript is the 6th version of the ECMAScript programming language,
+                It is the standardisation of javascript which was released in 2015.</p>
+
+            <hr>
+
+            <h2> let </h2>
+
+            ‘let' statement declares a block-scoped variable, we can initialise the variable with value also.
+
+            <div class="blog-code">
+                <p>let variableName ;</p>
+                <p>let a; //declared a variable named ‘a’. By default it is undefined</p>
+                <p>let variableName = value;</p>
+                <p>let a =10; // declared a variable named ‘a’ and assigning 10 to it</p>
+            </div>
+
+            <div>
+                Scope of let :
+                Is block scoped, works within the scope of block
+                <u>{ scope of let }</u>
+                Unlike var which declares a variable globally or locally .
+                Here let is not function scoped but block scoped { };
+                <div class="blog-code">
+                    <p>function test(){</p>
+                    <p>let a =10; }</p>
+                    <p>console.log(a); //can’t find variable a</p>
+
+                    <p>function test() {</p>
+                    <p>let a =10;</p>
+                    <p>console.log(a); }</p>
+
+                    <p>console.log(test());</p>
+
+                    <p>console-o/p: 10;</p>
+                </div>
+
+
+                let cannot be re-declared within its scope
+                <div class="blog-code">
+                    <p>function test(){</p>
+                    <p>let a =10;</p>
+                    <p>let a = 240; }</p>
+                    <p>SyntaxError: Cannot declare a let variable twice: 'a'.</p>
+                </div>
+
+                Also, since a variable cannot be declared more than once within a scope, then the problem which occurs
+                with re-declaration of 'var'
+                does not happen by using let
+
+            </div>
+
+            <hr>
+            <h2> const </h2>
+
+            ‘const' statement declares a block-scoped variable.
+            Note: Every const variable must be initialized at the time of declaration.
+            <div class="blog-code">
+                <p>function test() {</p>
+                <p>const a ;</p>
+                <p>a = 100; }</p>
+                <p>SyntaxError: Unexpected token ';'. const declared variable 'a' must have an initializer.</p>
+            </div>
+
+            Scope of const :
+            Here const is not function scoped but block scoped { } same as let
+            <div class="blog-code">
+                <p>function test(){</p>
+                <p>const a =10; }</p>
+                <p>console.log(a); //can’t find variable a</p>
+
+                <p></p>function test() {
+                <p>const a =10;</p>
+                <p>console.log(a); }</p>
+
+                <p>console.log(test());</p>
+
+                <p>console-o/p : 10;</p>
+            </div>
+
+            const cannot be updated or re-declared
+            This means that the value of a variable declared with const remains the same within its scope. It cannot be
+            updated or re-declared.
+            <div class="blog-code">
+                <p>function test(){</p>
+                <p>const a =10;</p>
+                <p>const a = 240; }</p>
+                <p>SyntaxError: Cannot declare a const variable twice: 'a'. </p>
+            </div>
+
+            <hr>
+
+            <h1>Difference between =, ==, === in javascript</h1>
+            <div class="blog-operators">
+                <h3>= assignment operator used for assigning values to a variable.</h3>
+                <h3>== comparison operator used to compare the identity of two operands, even if they are not similar type
+                </h3>
+                <h3>=== strict equality comparison used for comparison between two variables but this will check strict
+                    type,which means it will check datatype and compare two values.Returns false if values are not of
+                    same
+                    type</h3>
+            </div>
+
+
+            Examples
+            <div class="blog-code">
+                Var score = 10; //here score variable is assigned with 10
+
+                <p>var x = 10;</p>
+                <p>console.log(x == 20); //false</p>
+                <p>console.log(x == 10); //true</p>
+                <p>console.log(x == '10'); //true</p>
+
+                <p>var y = 0;</p>
+                <p>console.log(y == ' '); //true.</p>
+                <p>// here any empty string converts to zero. So it is true</p>
+
+                <hr>
+                <p>The strict equality operator </p>
+                <p>var x = 10;</p>
+                <p>console.log(x === 20); //false</p>
+                <p>console.log(x === 10); //true</p>
+                <p>console.log(x === '10'); //false</p>
+                <p>var y = 0;</p>
+                <p>console.log(y === ' '); //false</p>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-header">connect with me at Socials</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/sharath-io">
+                    Github
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/sharath-io/">
+                    Linkedin
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/sharath_io">
+                    Twitter
+                </a>
+            </li>
+        </ul>
+    </footer>
 
 </body>
 

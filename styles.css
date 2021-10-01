@@ -132,3 +132,38 @@ hr {
 .projects-list {
     padding: 2rem;
 }
+
+.main-blog {
+    padding: 3rem;
+}
+
+.blog-read {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.blog-read-heading {
+    display: block;
+    font-size: 1.25em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+
+.blog-code {
+    background-color: var(--dark-gray);
+    margin: 0.5rem 1rem 2rem 1rem;
+    padding: 0.25rem;
+    width: 35%;
+}
+
+.blog-operators {
+    display: block;
+    padding: 2rem;
+}
