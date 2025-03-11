@@ -1,7 +1,16 @@
+import { useState } from "react";
+import { LoadingScreen } from "./components";
+
+
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
-      <h1>Portfolio</h1>
+   {!isLoaded && < LoadingScreen onComplete={()=> setIsLoaded(true) }/>} 
+   <div>
+    <h1>Portfolio</h1>
+  </div> 
+
     </>
   );
 }
