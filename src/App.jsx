@@ -1,16 +1,19 @@
 import { useState } from "react";
-import { LoadingScreen } from "./components";
-
+import { About, Home, LoadingScreen } from "./components";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
-   {!isLoaded && < LoadingScreen onComplete={()=> setIsLoaded(true) }/>} 
-   <div>
-    <h1>Portfolio</h1>
-  </div> 
-
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      <div
+        className={`min-h-screen transtion-opacity duration-700
+       ${isLoaded ? "opacity-100" : "opacity-0"}
+       bg-black text-gray-100`}
+      >
+        <Home/>
+        <About/>
+      </div>
     </>
   );
 }
