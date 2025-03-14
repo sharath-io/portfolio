@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { About, Home, LoadingScreen } from "./components";
 import { Projects } from "./components/sections/Projects";
+import { Contact } from "./components/sections/Contact";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,6 +16,7 @@ function App() {
         <Home/>
         <About/>
         <Projects/>
+        <Contact/>
       </div>
     </>
   );

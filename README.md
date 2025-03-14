@@ -51,3 +51,7 @@
 
    
    </details>
+
+
+* wrap every component on display around RevealOnScroll
+* componnet is displayed with reveal styling transition
