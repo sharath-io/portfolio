@@ -36,7 +36,7 @@ export const About = () => {
             </div>
 
             <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">Skills I am developing :</h3>
+              <h3 className="text-xl font-bold mb-4">Skills I am working on :</h3>
               <div className="flex flex-wrap gap-2">
                 {knownSkills.map((tech, key) => (
                   <span
